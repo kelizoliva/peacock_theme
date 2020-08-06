@@ -1,0 +1,133 @@
+/*----------------------------- Global Styling -----------------------------*/
+
+body {
+	/* Sticknav module is adding weird padding at the top for no reason. Need to figure out the best place for this for other sites (maybe in a PT module?) */
+	padding-top: 0px!important;
+}
+
+/* shrink logo on scroll */
+.reduce {
+		height: 80px;
+	}
+.reduce img {
+	width: 50%;
+}
+
+/*------------------------ Header/Navigation Styling ------------------------*/
+body .layout--ptc-full-screen-top .l-header {
+	padding-top: 0 !important;
+	background-color: #ffffff;
+	text-align: center;
+}
+.l-header .block-system-header {
+	background-color: #ffffff;
+}
+.l-header .header-identity-wrapper {
+	height: 90px;
+}
+.l-header .header-logo-wrapper {
+	left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    position: absolute;
+    max-width: unset;
+    height: auto;
+}
+.layout--ptc-full-screen-top .l-header img {
+	height: auto;
+}
+.l-header .block-system-main-menu, .l-header .block-search-form {
+		display: inline-block;
+		vertical-align: top;
+	}
+.l-header .block-system-main-menu .sub-arrow {
+	display: none;
+}
+.l-header .block-search-form form {
+	margin: 0;
+}
+.menu-toggle-button-icon, 
+.menu-toggle-button-icon::before, 
+.menu-toggle-button-icon::after {
+	background-color: #969696;
+}
+.l-header .menu-toggle-button-text {
+	color: transparent;
+	display: block;
+	height: 20px;
+}
+@media (min-width: 48em) {
+	.js .menu-dropdown > li.has-children > a:hover, 
+	.js .menu-dropdown > li.has-children > a:focus {
+		background-color: transparent;
+	}
+}
+
+@media (min-width: 70em) {
+	body .layout--ptc-full-screen-top .l-header {
+		background-color: #e32688;
+	}
+	.l-header .header-identity-wrapper:not(.reduce) {
+		height: 160px;
+	}	
+}
+
+/*------------------------ Slider Styling ------------------------*/
+}
+.flexslider .slides img {
+	width: 50%;
+}
+
+/*------------------------------ Icons ------------------------------*/
+
+.ico {
+	color: #ffffff;
+	background: #e32688;
+	border-radius: 50%;
+	padding: 8px;
+	font-size: 24px;
+}
+.ico:hover {
+	background: rgb(255,222,84);
+}
+
+/*------------- Bottom & Footer/Navigation Styling ---------------*/
+
+.l-bottom {
+	background: #dedede;
+	color: #000000;
+	padding-top: 25px;
+}
+.l-bottom .menu a,
+.l-bottom .menu a:hover {
+	text-decoration: none;
+}
+.l-bottom p {
+	margin-top: 0;
+}
+.l-bottom .block-block-social-media-buttons .icon {
+	margin: 4px;
+}
+.l-bottom .block-menu-menu-footer-menu .block-content, .l-bottom .block-block-social-media-buttons .block-content {
+	padding-top: 40px;
+}
+.l-footer {
+	padding: 0;
+	line-height: 1.5;
+	border-top: none;
+	background: #000000;
+	color: #ffffff;
+	font-size: 11px;
+}
+.l-footer .menu a {
+	font-size: 18px;
+	font-weight: 700;
+}
+.block-block-copy-privacy a {
+	color: #ffffff;
+}
+
+
+/*---------------------------- Some Basis theme overrides that need to be moved elsewhere ----------------------------*/
+
