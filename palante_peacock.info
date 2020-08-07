@@ -4,8 +4,8 @@ backdrop = 1.x
 base theme = palante_base
 
 stylesheets[all][] = css/fonts.css
-stylesheets[all][] = css/typography.css
 stylesheets[all][] = css/palante_peacock.css
+stylesheets[all][] = css/typography.css
 
 scripts[] = js/palante_peacock.js
 

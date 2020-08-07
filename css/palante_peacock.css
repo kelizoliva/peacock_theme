@@ -12,6 +12,37 @@ body {
 .reduce img {
 	width: 50%;
 }
+.breadcrumb {
+	background: transparent;
+}
+.breadcrumb li:not(:last-child):after {
+	font-family: 'themify';
+	content: "\e628";
+	border: none;
+	transform: unset;
+	-webkit-transform: unset;
+	top: 20%;
+	right: -25px;
+	color: #e32688;
+}
+.breadcrumb li:first-child {
+	padding-left: 0;
+}
+.breadcrumb li a {
+	text-decoration: underline;
+	text-decoration-color: #e32688;
+}
+
+/*------------------------------ Front-end Admin UI Styling ------------------------------*/
+.logged-in ul.primary li a, 
+.logged-in ul.primary li a:visited, 
+.logged-in ul.primary li a:hover, 
+.logged-in ul.primary li.active a, 
+.expand-dropdown-tabs-control, 
+.responsive-tabs-mobile .expand-dropdown-tabs-control:before, 
+.responsive-tabs-mobile .expand-dropdown-tabs-label {
+	border-color: #e32688;
+}
 
 /*------------------------ Header/Navigation Styling ------------------------*/
 body .layout--ptc-full-screen-top .l-header {
@@ -47,6 +78,9 @@ body .layout--ptc-full-screen-top .l-header {
 .l-header .block-search-form form {
 	margin: 0;
 }
+.l-header .block-system-main-menu .menu-dropdown {
+	text-transform: none;
+}
 .menu-toggle-button-icon, 
 .menu-toggle-button-icon::before, 
 .menu-toggle-button-icon::after {
@@ -61,6 +95,23 @@ body .layout--ptc-full-screen-top .l-header {
 	.js .menu-dropdown > li.has-children > a:hover, 
 	.js .menu-dropdown > li.has-children > a:focus {
 		background-color: transparent;
+	}
+	.menu-dropdown ul {
+		background: #ffffff;
+	}
+	.menu-dropdown ul a {
+		color: #000000;
+	}
+	.menu-dropdown ul a:hover, 
+	.menu-dropdown ul a:focus, 
+	.menu-dropdown ul a:active, 
+	.menu-dropdown ul a.highlighted {
+		background: #ffffff;
+		color: #e32688;
+	}
+	.menu-dropdown ul a.highlighted {}
+	.js .menu-dropdown ul ul {
+		border-left: none;
 	}
 }
 
@@ -92,12 +143,63 @@ body .layout--ptc-full-screen-top .l-header {
 	background: rgb(255,222,84);
 }
 
+/*------------------------------ Form Styling ------------------------------*/
+
+/* Mailchimp Overrides */
+.block-block-mailchimp-signup #mc_embed_signup form {
+	padding: 0;
+}
+.block-block-mailchimp-signup #mc_embed_signup input.email {
+	width: 100%;
+	border-radius: 0;
+}
+.block-block-mailchimp-signup #mc_embed_signup input {
+	border: 1px solid #ebebeb;
+}
+.block-block-mailchimp-signup #mc_embed_signup input.button {
+	border: none;
+}
+.block-block-mailchimp-signup #mc_embed_signup .button,
+.button {
+	background-color: #e32688;
+	border-radius: 0;
+	text-transform: none;
+}
+
+/*------------------------ Content General Styling ------------------------*/
+
+body:not(.front) .l-content .header {
+	background: transparent;
+	margin-bottom: 0;
+	background-attachment: unset;
+    background-size: unset;
+    background-repeat: unset;
+    background-position: unset;
+    background-image: none;
+}
+.block-block-mailchimp-signup form {
+	margin: 0;
+}
+.container.l-content, .container.l-right {
+	margin: 50px 0;
+}
+.block-block-donate-button img {
+	margin: 20px 0;
+	transition: all 0.3s ease;
+}
+.block-block-donate-button img:hover {
+	opacity: 0.5;
+}
+
 /*------------- Bottom & Footer/Navigation Styling ---------------*/
 
 .l-bottom {
 	background: #dedede;
 	color: #000000;
 	padding-top: 25px;
+}
+.l-bottom .menu {
+	font-size: 1.1rem;
 }
 .l-bottom .menu a,
 .l-bottom .menu a:hover {
@@ -106,11 +208,11 @@ body .layout--ptc-full-screen-top .l-header {
 .l-bottom p {
 	margin-top: 0;
 }
-.l-bottom .block-block-social-media-buttons .icon {
+.l-bottom .block-block-social-media-buttons .ico {
 	margin: 4px;
 }
-.l-bottom .block-menu-menu-footer-menu .block-content, .l-bottom .block-block-social-media-buttons .block-content {
-	padding-top: 40px;
+.l-bottom .block-menu-menu-footer-menu, .l-bottom .block-block-social-media-buttons {
+	margin-top: 40px;
 }
 .l-footer {
 	padding: 0;
