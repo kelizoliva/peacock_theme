@@ -247,6 +247,9 @@ body:not(.front) .l-content .header {
 .block-views-homepage-content-homepage-latest-news-block {
 	padding-top: 50px;
 }
+.views-field .image-field-caption {
+	display: none;
+}
 
 /*------------- Bottom & Footer/Navigation Styling ---------------*/
 
