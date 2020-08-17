@@ -107,6 +107,9 @@ body .layout--ptc-full-screen-top-right .l-header {
 	display: block;
 	height: 20px;
 }
+.l-header .block-system-main-menu a:hover {
+	color: #ffffff;
+}
 @media (min-width: 48em) {
 	.js .menu-dropdown > li.has-children > a:hover, 
 	.js .menu-dropdown > li.has-children > a:focus {
