@@ -60,6 +60,9 @@ ul {
 	font-family: 'LatoWeb', sans-serif;
 	letter-spacing: 0;
 }
+.l-header .block-system-main-menu ul:not(.contextual-links) li ul li {
+	text-transform: initial;
+}
 .l-header .block-system-main-menu .menu > li .menu-dropdown {
 	text-transform: none;
 }

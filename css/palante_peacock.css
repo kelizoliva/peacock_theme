@@ -110,6 +110,9 @@ body .layout--ptc-full-screen-top-right .l-header {
 .l-header .block-system-main-menu a:hover {
 	color: #ffffff;
 }
+.l-header .block-system-main-menu ul ul a:hover {
+	color: #000000;
+}
 @media (min-width: 48em) {
 	.js .menu-dropdown > li.has-children > a:hover, 
 	.js .menu-dropdown > li.has-children > a:focus {
@@ -128,7 +131,6 @@ body .layout--ptc-full-screen-top-right .l-header {
 		background: #ffffff;
 		color: #e32688;
 	}
-	.menu-dropdown ul a.highlighted {}
 	.js .menu-dropdown ul ul {
 		border-left: none;
 	}
