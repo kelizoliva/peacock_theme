@@ -14,6 +14,10 @@ h1, h2, h3, h6 {
 h1.block-title {
 	margin: 0 0 1em;
 }
+h3 {
+	color: #000000;
+	font-size: 28px;
+}
 h4 {
 	padding: 1rem 0 0.5rem;
 	font-size: 1.1em;
@@ -49,7 +53,11 @@ a:hover {
 /* ---- Lists ---- */
 
 ul {
-	list-style-type: square;
+	list-style-type: disc;
+	
+}
+ .l-content li:not(.horizontal-tab-button) {
+    font-size: 1em;
 }
 
 
@@ -94,17 +102,29 @@ ul {
 	font-size: 2em;
 	font-family: 'LatoWebLight';
 }
-/*------------------------------ Buttons ------------------------------*/
 
+/*------------------------------ Buttons ------------------------------*/
 .btn {
 	font-family: 'LatoWeb', sans-serif;
 }
 
 /*------------------------ Content General Styling ------------------------*/
-
 .block-views-homepage-content-homepage-latest-news-block .views-field-title {
 	text-align: center;
 }
 .block-views-homepage-content-homepage-latest-news-block .views-field-body {
 	font-size: 1em
+}
+
+/*------------------------ Paragraphs Styling ------------------------*/
+.paragraphs-item.paragraphs-item-individual-bio .field-name-field-bio-name,
+.paragraphs-item.paragraphs-item-individual-bio .field-name-field-bio-title {
+	font-size: 22.5px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.paragraphs-item.paragraphs-item-text-block-with-left-floating-he .field-name-field-text-block-title {
+	font-size: 28px;
+	font-weight: 700;
+	text-transform: uppercase;
 }
