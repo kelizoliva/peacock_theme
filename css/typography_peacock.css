@@ -126,7 +126,7 @@ p {
 	font-weight: 700;
 	text-transform: uppercase;
 }
-.paragraphs-item.paragraphs-item-text-block-with-left-floating-he .field-name-field-text-block-title {
+.paragraphs-item .field-name-field-text-block-title {
 	font-size: 28px;
 	font-weight: 700;
 	text-transform: uppercase;
