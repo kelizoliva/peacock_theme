@@ -26,7 +26,7 @@
  * @see template_process()
  */
 ?>
-<div class="<?php print implode(' ', $classes); ?> col-12 col-md-3"<?php print backdrop_attributes($attributes); ?>>
+<div class="<?php print implode(' ', $classes); ?> col-12 col-md-4"<?php print backdrop_attributes($attributes); ?>>
   <div class="content"<?php print backdrop_attributes($content_attributes); ?>>
     <?php print render($content); ?>
   </div>

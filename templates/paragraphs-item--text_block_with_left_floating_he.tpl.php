@@ -27,7 +27,13 @@
  */
 ?>
 <div class="<?php print implode(' ', $classes); ?>"<?php print backdrop_attributes($attributes); ?>>
-  <div class="content"<?php print backdrop_attributes($content_attributes); ?>>
-    <?php print render($content); ?>
+  <div class="content container"<?php print backdrop_attributes($content_attributes); ?>>
+    <div class="col-12 col-sm-3">
+      <?php  print render($content['field_text_block_title']); ?>
+      <?php  print render($content['field_text_block_description']); ?>
+    </div>
+    <div class="col-12 col-sm-9">
+      <?php  print render($content['field_text_block_body']); ?>
+    </div>
   </div>
 </div>

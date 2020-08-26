@@ -59,6 +59,9 @@ ul {
  .l-content li:not(.horizontal-tab-button) {
     font-size: 1em;
 }
+p {
+  font-size: 1em;
+}
 
 
 /*------------------------------ Navigation ------------------------------*/
