@@ -199,6 +199,19 @@ body .layout--ptc-full-screen-top-right .l-header {
 	background: rgb(255,222,84);
 }
 
+/*------------------------------ Misc ------------------------------*/
+
+.top-scroller {
+  border-radius: 2px;
+  background: rgba(0,0,0,.75);
+  border: 1px solid #ebebeb;
+}
+.top-scroller svg {
+  top: 14px;
+  right: 3em;
+}
+
+
 /*------------------------------ Form Styling ------------------------------*/
 
 /* Mailchimp Overrides */
@@ -254,6 +267,11 @@ body:not(.front) .l-content .header {
 }
 .views-field .image-field-caption {
 	display: none;
+}
+
+/*------------------------ Paragraphs Styling ------------------------*/
+.paragraphs-item {
+  margin-bottom: 2em;
 }
 
 /*------------- Bottom & Footer/Navigation Styling ---------------*/

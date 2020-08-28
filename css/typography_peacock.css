@@ -126,8 +126,15 @@ p {
 	font-weight: 700;
 	text-transform: uppercase;
 }
-.paragraphs-item .field-name-field-text-block-title {
+.paragraphs-item .field-name-field-text-block-title,
+.paragraphs-item .field-name-field-bio-name,
+.paragraphs-item .field-name-field-bio-title {
 	font-size: 28px;
-	font-weight: 700;
-	text-transform: uppercase;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'LatoWebBlack';
+  line-height: 1.2em;
+}
+.paragraphs-item .field-name-field-text-block-description {
+  padding-top: .5em;
 }
