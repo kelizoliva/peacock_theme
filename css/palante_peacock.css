@@ -35,7 +35,7 @@ body {
 
 /*------------------------------ Buttons ------------------------------*/
 
-.btn {
+.btn, .field-name-field-cta-button a {
 	text-transform: none;
 	letter-spacing: 0;
 	padding: 14px 30px;
@@ -43,11 +43,11 @@ body {
 	margin: 30px auto 20px auto;
 	border-radius: 2px;
 	display: table;
-	font-family: 'd-din_expdinexp-bold', sans-serif;
+	text-decoration: none;
 }
-.btn.btn-outline {
-	border:3px solid;
-}
+.btn.btn-outline, .field-name-field-cta-button a {
+	border:3px solid #e32688;
+} 
 
 /*------------------------------ Front-end Admin UI Styling ------------------------------*/
 .logged-in ul.primary li a, 
@@ -65,7 +65,7 @@ body .layout--ptc-full-screen-top .l-header,
 body .layout--ptc-full-screen-top-right .l-header {
 	padding-top: 0 !important;
 	background-color: #ffffff;
-	text-align: center;
+	text-align: right;
 }
 .l-header .block-system-header {
 	background-color: #ffffff;
@@ -101,6 +101,14 @@ body .layout--ptc-full-screen-top-right .l-header {
 .menu-toggle-button-icon::before, 
 .menu-toggle-button-icon::after {
 	background-color: #969696;
+	width: 35px;
+	height: 3px;
+}
+.menu-toggle-button-icon:before {
+  top: -9px;
+}
+.menu-toggle-button-icon:after {
+  top: 9px;
 }
 .l-header .menu-toggle-button-text {
 	color: transparent;
@@ -113,6 +121,39 @@ body .layout--ptc-full-screen-top-right .l-header {
 .l-header .block-system-main-menu ul ul a:hover {
 	color: #000000;
 }
+
+/* mobile sidenav styling 
+.menu-toggle-button, .menu-toggle-state {
+  z-index: 100;
+}
+.menu-toggle-state:not(:checked) ~ .menu {
+  width: 0;
+}
+.menu-toggle-state:checked ~ .menu {
+  height: 100%; 
+  width: 350px;
+  max-width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0; 
+  right: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  background: #ffffff;
+  transform: translateX(0);
+  z-index: 10;
+  -webkit-overflow-scrolling: touch;  
+}
+.menu-toggle-state:checked ~ .menu a {
+  color: #000000;
+}*/
+
+.responsive-menus.responsified.responsive-toggled.absolute .responsive-menus-simple {
+  width: 350px;
+  right: 0;
+}
+
 @media (min-width: 48em) {
 	.js .menu-dropdown > li.has-children > a:hover, 
 	.js .menu-dropdown > li.has-children > a:focus {
@@ -140,6 +181,7 @@ body .layout--ptc-full-screen-top-right .l-header {
 	body .layout--ptc-full-screen-top .l-header,
 	body .layout--ptc-full-screen-top-right .l-header {
 		background-color: #e32688;
+		text-align: center;
 	}
 	.l-header .header-identity-wrapper:not(.reduce) {
 		height: 160px;
@@ -255,11 +297,13 @@ body:not(.front) .l-content .header {
 .container.l-content, .container.l-right {
 	margin: 50px 0;
 }
-.block-block-donate-button img {
+.block-block-donate-button img,
+.field-name-field-thumbnail-image img {
 	margin: 20px 0;
 	transition: all 0.3s ease;
 }
-.block-block-donate-button img:hover {
+.block-block-donate-button img:hover,
+.field-name-field-thumbnail-image img:hover {
 	opacity: 0.5;
 }
 .block-views-homepage-content-homepage-latest-news-block {
@@ -268,10 +312,27 @@ body:not(.front) .l-content .header {
 .views-field .image-field-caption {
 	display: none;
 }
+body .layout--ptc-full-screen-top-right .l-right {
+  display: none;
+}
+@media (min-width: 48em) {
+  body .layout--ptc-full-screen-top-right .l-right {
+    display: inline-flex;
+  }
+}
 
 /*------------------------ Paragraphs Styling ------------------------*/
 .paragraphs-item {
   margin-bottom: 2em;
+}
+.field-name-field-thumbnail-image {
+    height: 175px;
+    width: 150px;
+}
+.paragraphs-item-content-with-left-floating-thumb .right {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 6px solid #54FFE7;
 }
 
 /*------------- Bottom & Footer/Navigation Styling ---------------*/
@@ -315,5 +376,7 @@ body:not(.front) .l-content .header {
 
 
 /*---------------------------- Layout Overrides ----------------------------*/
-
+body .layout--ptc-full-screen-top-right .l-top {
+  margin-bottom: -50px;
+}
 
