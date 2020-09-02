@@ -27,7 +27,7 @@
  */
 ?>
 <div class="<?php print implode(' ', $classes); ?>"<?php print backdrop_attributes($attributes); ?>>
-  <div class="content container"<?php print backdrop_attributes($content_attributes); ?>>
+  <div class="content container gutters"<?php print backdrop_attributes($content_attributes); ?>>
     <div class="col-12 col-sm-4 left">
       <?php  print render($content['field_thumbnail_image']); ?>
     </div>
