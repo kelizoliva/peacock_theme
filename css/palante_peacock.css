@@ -171,6 +171,11 @@ body .layout--ptc-full-screen-top-right .l-header {
 
 
 @media (min-width: 48em) {
+  /*.js .menu-dropdown ul .mega ul {
+    display: block;
+    position: relative;
+  }*/
+  
 	.js .menu-dropdown > li.has-children > a:hover, 
 	.js .menu-dropdown > li.has-children > a:focus {
 		background-color: transparent;
@@ -265,7 +270,7 @@ body .layout--ptc-full-screen-top-right .l-header {
   border: 1px solid #ebebeb;
 }
 .top-scroller svg {
-  top: 14px;
+  padding-top: 14px;
   right: 3em;
 }
 
