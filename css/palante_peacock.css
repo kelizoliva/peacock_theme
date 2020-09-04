@@ -351,6 +351,7 @@ body .layout--ptc-full-screen-top-right .l-right {
   overflow: hidden;
   position: relative;
   margin-top: 1em;
+  border-radius: 4px;
 }
 .view-news .views-field-field-main-image img {
   position: absolute;
@@ -362,7 +363,6 @@ body .layout--ptc-full-screen-top-right .l-right {
   margin: auto;
   min-height: 100%;
   min-width: 100%;
-  border-radius: 4px;
 }
 
 @media (min-width: 48em) {
