@@ -2,6 +2,7 @@
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'LatoWebBlack', sans-serif;
 	margin: 10px 0;
+	color: #000000;
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -15,8 +16,7 @@ h1.block-title {
 	margin: 0 0 1em;
 }
 h3 {
-	color: #000000;
-	font-size: 28px;
+	font-size: 1.4em;
 }
 h4 {
 	padding: 1rem 0 0.5rem;
@@ -60,16 +60,14 @@ body,
 a {
 	color: #e32688;
 	transition: color .3s ease;
+	text-decoration: none;
 }
 a:hover {
-	text-decoration: none;
+	text-decoration: underline;
 	color: #e32688;
 }
 .paragraph a {
 	text-decoration: none;
-}
-.paragraph a:hover {
-	text-decoration: underline;
 }
 
 /* ---- Lists ---- */
@@ -90,7 +88,7 @@ p {
 .l-header .block-system-main-menu .menu > li {
 	text-transform: uppercase;
 	font-size: 1.15em;
-	font-family: 'LatoWeb', sans-serif;
+	font-family: 'LatoWebMedium', sans-serif;
 	letter-spacing: 0;
 }
 .l-header .block-system-main-menu ul:not(.contextual-links) li ul li {
@@ -120,7 +118,7 @@ p {
 	color: #000000;
 }
 .block-views-homepage-content-homepage-slideshow-block h1 {
-	font-size: 1.5em;
+	font-size: 65px;
 }
 .block-views-homepage-content-homepage-slideshow-block .date-display-single {
 	font-weight: 100;
@@ -147,6 +145,7 @@ p {
 	font-size: 22.5px;
 	font-weight: 700;
 	text-transform: uppercase;
+	text-align: center;
 }
 .paragraphs-item .field-name-field-text-block-title,
 .paragraphs-item .field-name-field-bio-name,
