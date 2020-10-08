@@ -3,6 +3,7 @@ description = This is a sub-theme the Palante Base theme
 backdrop = 1.x
 base theme = palante_base
 
+stylesheets[all][] = css/menu_peacock.css
 stylesheets[all][] = css/fonts_peacock.css
 stylesheets[all][] = css/palante_peacock.css
 stylesheets[all][] = css/typography_peacock.css

@@ -1,0 +1,26 @@
+.block-system-main-menu ul.menu-tree {
+  position: relative;
+}
+.block-system-main-menu ul.menu-tree li > ul a {
+  color: #000000;
+}
+.block-system-main-menu ul.menu-tree li ul {
+  box-shadow: 0 32px 60px rgba(0, 0, 0, 0.1);
+  width: auto;
+  min-width: 10em;
+  max-width: 20em;
+}
+.block-system-main-menu ul.menu-tree li > ul {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  padding: 0;
+  background: #ffffff;
+}
+.block-system-main-menu ul.menu-tree li > ul > li > ul {
+  left: 100%;
+  margin-top: -50%;
+}
+.block-system-main-menu ul.menu-tree li:hover > ul {
+  display: block;
+}

@@ -28,14 +28,14 @@ h4 {
 .landing {
   border-bottom: 5px solid #54FFE7;
   background: #FFDE54;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   position: relative;
 }
 .landing:after {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 200px 200px 0;
+  border-width: 0 75px 100px 0;
   border-color: transparent #ffffff transparent transparent;
   content: "";
   position: absolute;
@@ -44,6 +44,9 @@ h4 {
 }
 .landing h2 {
   margin: 10px 10px 0 10px;
+}
+h2.landing {
+  padding: 10px 10px 10px 10px;
 }
 
 /*------------------------------ Text ------------------------------*/
@@ -88,8 +91,12 @@ p {
 .l-header .block-system-main-menu .menu > li {
 	text-transform: uppercase;
 	font-size: 1.15em;
-	font-family: 'LatoWebMedium', sans-serif;
+	font-family: 'LatoWebSemibold', sans-serif;
 	letter-spacing: 0;
+	font-weight: 500;
+}
+.l-header ul:not(.contextual-links) li {
+  letter-spacing: 0;
 }
 .l-header .block-system-main-menu ul:not(.contextual-links) li ul li {
 	text-transform: initial;
@@ -101,6 +108,15 @@ p {
 @media (min-width: 34em) {
 	.l-header .menu a {
 		padding: .8rem .8rem;
+	}
+}
+@media (min-width: 70em) {
+	.l-header .menu li li a {
+		padding: .5rem .8rem;
+	}
+	.l-header .menu li li a:hover {
+		background: #e32688;
+		color: #ffffff;
 	}
 }
 
@@ -158,4 +174,12 @@ p {
 }
 .paragraphs-item .field-name-field-text-block-description {
   padding-top: .5em;
+}
+.paragraphs-item p:first-child, .paragraphs-item ul:first-child {
+  margin: 0;
+}
+
+/*------------------------ Footer Styling ------------------------*/
+.l-footer a {
+  font-size: 1em;
 }
