@@ -232,7 +232,7 @@ body .layout--ptc-full-screen-top-right .l-header {
   top: 0;
 }
 #mobile-menu, .mobile-menu {
-  padding: 4.5em 0;
+  padding: 6.5em 0;
 }
 #mobile-menu li, .mobile-menu li, #mobile-menu > li:first-child, .submenu-title {
   border-top: none;
@@ -289,27 +289,52 @@ body .layout--ptc-full-screen-top-right .l-header {
 .block-system-main-menu {
   display: inline-block;
 }
-.search {
+.l-header .search {
+  position: absolute;
+  right: 6.5em;
+  top: 1.8em;
   font-family: 'themify';
   height: 25px;
   width: 25px;
   display: inline-block;
   cursor: pointer;
   font-weight: 900;
-  color: #ffffff;
-  padding: 1rem .8rem;
+  color: #000000;
+  padding: 1rem 1.8rem;
 } 
 .l-header .block-search-form {
   display: none;
 }
-
+.l-header .block-search-form .search-block-form {
+  box-shadow: 0 32px 60px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 1em;
+  background: #ffffff;
+}
+.l-header .block-search-form .search-block-form:before {
+  font-family: 'themify';
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ffffff;
+  position: absolute;
+  top: -10px;
+  width: 0;
+  z-index: 105;
+  margin: auto;
+  left: 46%;
+  right: 0;
+  font-size: 20px;
+}
+.l-header .block-search-form .form-item-search-block-form {
+  margin: 0;
+}
+.l-header .block-search-form input.form-search {
+  background: #ec068c;
+  border-color: transparent;
+}
 
 @media (min-width: 48em) {
-  /*.js .menu-dropdown ul .mega ul {
-    display: block;
-    position: relative;
-  }*/
-
 	.js .menu-dropdown > li.has-children > a:hover, 
 	.js .menu-dropdown > li.has-children > a:focus {
 		background-color: transparent;
@@ -391,6 +416,16 @@ body .layout--ptc-full-screen-top-right .l-header {
   .layout--ptc-full-screen-top-right .l-header.header-scroll .scrollme img {
     height: 85px;
     transition: all 0.3s ease;
+  }
+  .l-header .search {
+    position: relative;
+    right: inherit;
+    top: inherit;
+    color: #ffffff;
+    padding: 1.2rem .8rem;
+  }
+  .l-header .block-search-form {
+    margin-top: 20px;
   }
 }
 

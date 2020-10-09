@@ -1,7 +1,39 @@
 $(function () {
   
-  // Dop in a search icon
-  $( ".block-system-main-menu" ).after( $( "<span class='ti-search search'></span>" ) );
+  // Drop in a search icon, hide and display search field
+  $( '.block-system-main-menu' ).after( $( '<span class="ti-search search"></span>' ) );
+  
+  $(window).on("load resize",function(e){
+    var offset = $('.l-header .search').offset();
+    var height = $('.l-header .search').height();
+    var width = $('.l-header .search').width();
+    var top = offset.top + height + "px";
+    var left = offset.left - 120 + "px";
+  
+    $('.l-header .block-search-form').css( {
+      'position': 'absolute',
+      'left': left,
+      'top': top,
+      'z-index': '1000'
+    });
+  });
+  
+  $('.l-header .search').on('click', function() {
+    $('.l-header .block-search-form').slideToggle();
+    return false;
+  });
+  
+  $('.l-header .block-search-form').on('click', function(e) {
+    e.stopPropagation();
+  });
+  
+  $(document).on('click', function(e) {
+    if ($('.l-header .block-search-form').length) {
+      $('.l-header .block-search-form').slideUp();
+      return false;
+    }
+  });
+
   
 	new WOW().init();
 	
