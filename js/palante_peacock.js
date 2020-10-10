@@ -26,13 +26,12 @@ $(function () {
   $('.l-header .block-search-form').on('click', function(e) {
     e.stopPropagation();
   });
-  
-  $(document).on('click', function(e) {
-    if ($('.l-header .block-search-form').length) {
+  if ($('.l-header .block-search-form').length) {
+    $(document).on('click', function(e) {
       $('.l-header .block-search-form').slideUp();
-      return false;
-    }
-  });
+      e.stopPropagation();
+    });
+  }
 
   
 	new WOW().init();
