@@ -39,6 +39,8 @@
  * @ingroup themeable
  */
 ?><!DOCTYPE html>
+
+<?php print $messages; ?>
 <html<?php print backdrop_attributes($html_attributes); ?>>
   <head>
     <?php print backdrop_get_html_head(); ?>

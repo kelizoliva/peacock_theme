@@ -28,6 +28,10 @@
 ?>
 <div class="<?php print implode(' ', $classes); ?> col-12 col-md-4"<?php print backdrop_attributes($attributes); ?>>
   <div class="content"<?php print backdrop_attributes($content_attributes); ?>>
-    <?php print render($content); ?>
+    <?php  print render($content['field_bio_image']); ?>
+    <a href="<?php  print render($content['field_bio_link']['#items'][0]['url']); ?>">
+    <?php  print render($content['field_bio_name']); ?>
+    <?php  print render($content['field_bio_title']); ?></a>
+    </a>
   </div>
 </div>

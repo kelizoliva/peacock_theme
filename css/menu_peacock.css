@@ -3,6 +3,7 @@
 }
 .block-system-main-menu ul.menu-tree li > ul a {
   color: #000000;
+  width: 100%;
 }
 .block-system-main-menu ul.menu-tree li ul {
   box-shadow: 0 32px 60px rgba(0, 0, 0, 0.1);
@@ -16,11 +17,13 @@
   z-index: 999;
   padding: 0;
   background: #ffffff;
+  margin-top: 2px;
 }
 .block-system-main-menu ul.menu-tree li > ul > li > ul {
   left: 100%;
   margin-top: -50%;
 }
-.block-system-main-menu ul.menu-tree li:hover > ul {
+.block-system-main-menu ul.menu-tree li:hover > ul,
+.block-system-main-menu ul.menu-tree li.open > ul {
   display: block;
 }

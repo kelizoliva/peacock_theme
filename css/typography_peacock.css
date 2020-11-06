@@ -134,12 +134,17 @@ p {
 	color: #000000;
 }
 .block-views-homepage-content-homepage-slideshow-block h1 {
-	font-size: 65px;
+	font-size: 45px;
 }
 .block-views-homepage-content-homepage-slideshow-block .date-display-single {
 	font-weight: 100;
 	font-size: 2em;
 	font-family: 'LatoWebLight';
+}
+@media (min-width: 34em) {
+  .block-views-homepage-content-homepage-slideshow-block h1 {
+  	font-size: 65px;
+  }
 }
 
 /*------------------------------ Buttons ------------------------------*/

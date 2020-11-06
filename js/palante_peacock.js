@@ -1,7 +1,23 @@
 $(function () {
   
+  // Keypress accessibility
+  function a11yClick(event){
+    if(event.type === 'click'){
+      return true;
+    }
+    else if(event.type === 'keypress'){
+      var code = event.charCode || event.keyCode;
+      if((code === 32)|| (code === 13)){
+          return true;
+      }
+    }
+    else{
+      return false;
+    }
+  }
+  
   // Drop in a search icon, hide and display search field
-  $( '.block-system-main-menu' ).after( $( '<span class="ti-search search"></span>' ) );
+  $( '.block-system-main-menu' ).after( $( '<span class="ti-search search" tabindex="0"></span>' ) );
   
   $(window).on("load resize",function(e){
     var offset = $('.l-header .search').offset();
@@ -14,22 +30,28 @@ $(function () {
       'position': 'absolute',
       'left': left,
       'top': top,
-      'z-index': '1000'
+      'z-index': '10001'
     });
   });
   
-  $('.l-header .search').on('click', function() {
-    $('.l-header .block-search-form').slideToggle();
-    return false;
+  $('.l-header .search').on('click keypress', function(e) {
+    if(a11yClick(e) === true){
+      $('.l-header .block-search-form').slideToggle();
+      return false;
+    }
   });
   
-  $('.l-header .block-search-form').on('click', function(e) {
-    e.stopPropagation();
+  $('.l-header .block-search-form').on('click keypress', function(e) {
+    if(a11yClick(e) === true){
+      e.stopPropagation();
+    }
   });
   if ($('.l-header .block-search-form').length) {
-    $(document).on('click', function(e) {
-      $('.l-header .block-search-form').slideUp();
-      e.stopPropagation();
+    $(document).on('click keypress', function(e) {
+      if(a11yClick(e) === true){
+        $('.l-header .block-search-form').slideUp();
+        e.stopPropagation();
+      }
     });
   }
 
@@ -99,4 +121,24 @@ $(function () {
   });
   $(window).trigger('resize');
   
+  // Menu Accessibility
+  var menuItems = document.querySelectorAll('.block-system-main-menu li.has-children');
+  Array.prototype.forEach.call(menuItems, function(el, i){
+  	var activatingA = el.querySelector('a');
+  	var btn = '<button><span><span class="visuallyhidden">show submenu for “' + activatingA.text + '”</span></span></button>';
+  	activatingA.insertAdjacentHTML('afterend', btn);
+  
+  	el.querySelector('button').addEventListener("click",  function(event){
+  		if (this.parentNode.className == "has-children") {
+    		this.parentNode.classList.toggle("open");
+  			this.parentNode.querySelector('a').setAttribute('aria-expanded', "true");
+  			this.parentNode.querySelector('button').setAttribute('aria-expanded', "true");
+  		} else {
+  			this.parentNode.classList.toggle("open");
+  			this.parentNode.querySelector('a').setAttribute('aria-expanded', "false");
+  			this.parentNode.querySelector('button').setAttribute('aria-expanded', "false");
+  		}
+  		event.preventDefault();
+  	});
+  });
 });

@@ -4,6 +4,14 @@ body {
 	/* Sticknav module is adding weird padding at the top for no reason. Need to figure out the best place for this for other sites (maybe in a PT module?) */
 	padding-top: 0px!important;
 }
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 .breadcrumb {
 	background: transparent;
 }
@@ -119,7 +127,7 @@ body .layout--ptc-full-screen-top-right .l-header {
 }
 .layout--ptc-full-screen-top .l-header img,
 .layout--ptc-full-screen-top-right .l-header img {
-	height: 80px;
+	height: 60px;
 }
 .l-header .block-system-main-menu, .l-header .block-search-form {
 		display: inline-block;
@@ -169,13 +177,15 @@ body .layout--ptc-full-screen-top-right .l-header {
 }
 
 /* mobile sidenav styling */
+#l-header .block-system-main-menu .block-content,
 #collapsed-menu-button {
   border: none;
   padding: 0;
-  margin: 0;
-  height: 24px;
-  width: 70px;
+  margin: -2px;
+  height: 30px;
+  width: 75px;
   display: block;
+  background: transparent;
   z-index: 10000;
 }
 .mobile-button-icon {
@@ -224,11 +234,13 @@ body .layout--ptc-full-screen-top-right .l-header {
 .mobile-menu-button.active .mobile-button-icon:before {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+  background: #000000;
   top: 0;
 }
 .mobile-menu-button.active .mobile-button-icon:after {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+  background: #000000;
   top: 0;
 }
 #mobile-menu, .mobile-menu {
@@ -291,7 +303,7 @@ body .layout--ptc-full-screen-top-right .l-header {
 }
 .l-header .search {
   position: absolute;
-  right: 6.5em;
+  right: 5.5em;
   top: 1.8em;
   font-family: 'themify';
   height: 25px;
@@ -330,7 +342,7 @@ body .layout--ptc-full-screen-top-right .l-header {
   margin: 0;
 }
 .l-header .block-search-form input.form-search {
-  background: #ec068c;
+  background: #e32688;
   border-color: transparent;
 }
 
@@ -363,6 +375,13 @@ body .layout--ptc-full-screen-top-right .l-header {
 	.l-header .block-system-main-menu {
   	right: 2em;
 	}
+	.layout--ptc-full-screen-top .l-header img,
+  .layout--ptc-full-screen-top-right .l-header img {
+  	height: 80px;
+  }
+  .l-header .search {
+    right: 6.5em;
+  }
 }
 
 @media (min-width: 70em) {
@@ -381,11 +400,18 @@ body .layout--ptc-full-screen-top-right .l-header {
   .l-header .block-system-main-menu {
     position: unset;
   }
+  #l-header .block-system-main-menu .block-content {
+    padding: 0;
+    margin: 0;
+    height: unset;
+    width: unset;
+    z-index: unset;
+  }
   .l-header .block-system-header {
     text-align: center;
     padding-left: 0;
   }
-  .l-header .header-logo-wrapper {
+  .l-header .header-site-name-link {
   	left: 50%;
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
@@ -425,7 +451,7 @@ body .layout--ptc-full-screen-top-right .l-header {
     padding: 1.2rem .8rem;
   }
   .l-header .block-search-form {
-    margin-top: 20px;
+    margin-top: -20px;
   }
 }
 
@@ -434,19 +460,21 @@ body .layout--ptc-full-screen-top-right .l-header {
 	background: none;
 	border: none;
 	padding: 4em 4em .5em 4em;
+	width: 100%;
+	max-width: 100%;
 }
 .block-views-homepage-content-homepage-slideshow-block .flexslider .slides img {
 	width: 100%;
+	max-width: 100%;
 }
 .block-views-homepage-content-homepage-slideshow-block .flexslider .slides .views-field-field-main-image {
-  width: 60%;
+  width: 100%;
 }
-.block-views-homepage-content-homepage-slideshow-block {
+body .container > .col-12.block-views-homepage-content-homepage-slideshow-block {
 	background: url('../images/homeslide-background.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
 .view-display-id-more_press_block_view .flex-viewport {
   overflow: visible!important;
 }
@@ -560,6 +588,11 @@ body .layout--ptc-full-screen-top-right .l-header {
   .block-views-homepage-content-homepage-slideshow-block .flexslider .slides .views-field-field-main-image {
     float: right;
   }
+}
+@media (min-width: 70em) {
+  .block-views-homepage-content-homepage-slideshow-block .flexslider .slides .views-field-field-main-image {
+    width: 60%;
+  } 
 }
 
 /*------------------------------ Icons ------------------------------*/
@@ -899,4 +932,57 @@ body .layout--ptc-full-screen-top-right .l-top {
   }
 }
 
+
+/*---------------------------- Accessibility ----------------------------*/
+*:focus {
+  border: 2px solid #bf3879;
+}
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.l-header .menu a, .l-header .has-children button {
+  border: none;
+  background: transparent;
+}
+.l-header .has-children ul li button {
+  position: absolute;
+  right: 0;
+  margin-top: 11px;
+}
+.l-header .menu a, .l-header .has-children button > span {
+  display: inline-block;
+}
+.l-header .has-children button > span {
+    width: .6em;
+    height: .6em;
+    background: url(../../palante-base/images/down-arrow-white.svg) center no-repeat;
+    background-size: contain;
+}
+.l-header .has-children .has-children button > span {
+    width: .6em;
+    height: .6em;
+    background: url(../../palante-base/images/right-arrow-blk.svg) center no-repeat;
+    background-size: contain;
+}
+.views-field-field-main-image a:focus img {
+  border: 2px solid #bf3879;
+}
+@media (min-width: 70em) {
+  .l-header .search {
+      margin: 1rem .8rem;
+      padding: 4px 0 0 0;
+    }
+  .ti-search:focus,
+  .l-header .has-children button:focus {
+    outline:0;
+    background: #bf3879;
+  }
+}
 
