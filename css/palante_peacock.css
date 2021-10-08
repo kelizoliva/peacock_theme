@@ -640,7 +640,9 @@ body .container > .col-12.block-views-homepage-content-homepage-slideshow-block 
 	border: 1px solid #ebebeb;
 }
 .block-block-mailchimp-signup #mc_embed_signup input.button {
-	border: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .block-block-mailchimp-signup #mc_embed_signup .button,
 .button {
@@ -989,5 +991,10 @@ body .layout--ptc-full-screen-top-right .l-top {
     outline:0;
     background: #bf3879;
   }
+}
+
+/* Sidebar: "Your Email" */
+input#mce-EMAIL::placeholder {
+  color: #000;
 }
 
